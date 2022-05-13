@@ -92,8 +92,10 @@ body {
 hr {
   margin-top: 10px;
   width: 500px;
-  border: 3px solid whitesmoke;
-  box-shadow: 5px 5px 5px rgb(105, 104, 104);
+  height: 4px;
+  background-color: whitesmoke;
+  border: 0 0 0 0 whitesmoke;
+  box-shadow: 5px 5px 8px rgb(105, 104, 104);
 }
 
 .lista-itens {
