@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 * {
   padding: 0;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: sans-serif;
   font-size: 16px;
   text-decoration: none;
   -moz-appearance: none;
@@ -26,13 +28,18 @@ body {
 }
 
 #titulo {
-  margin: 25px;
+  order: 1;
+  text-align: center;
+  margin: 1% 0px 1% 0px;
   color: whitesmoke;
   font-size: 40px;
   font-weight: 1000;
   text-shadow: 10px 5px 10px rgb(100, 100, 100);
 }
 
+#tarefa {
+  order: 2;
+}
 .postagem {
   text-align: center;
   height: 5rem;
@@ -75,6 +82,7 @@ body {
 }
 
 .lista {
+  order: 3;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -94,14 +102,16 @@ hr {
   width: 500px;
   height: 4px;
   background-color: whitesmoke;
-  border: 0 0 0 0 whitesmoke;
+  border: none;
   box-shadow: 5px 5px 8px rgb(105, 104, 104);
 }
 
 .lista-itens {
+  order: 4;
   margin: 15px;
   display: flex;
   flex-direction: column;
+  max-width: 60%;
 }
 
 .items {
@@ -117,9 +127,11 @@ hr {
 
 .item-descricao {
   margin: 15px;
-  padding-left: 15px;
+  padding: 0 15px 0px 15px;
   text-decoration: none;
   border-left: 3px solid gray;
+  inline-size: 80%;
+  overflow-wrap: break-word;
 }
 
 .check {
@@ -149,4 +161,34 @@ hr {
   transform: scale(1);
   transform-origin: bottom left;
   clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+@media screen and (max-width: 720px) {
+  #titulo {
+    font-size: calc(10vw - 10%);
+  }
+
+  .postagem {
+    flex-direction: column;
+    margin: 1rem;
+  }
+
+  #texto {
+    width: 90vw;
+    margin-bottom: 1rem;
+  }
+
+  #button {
+    padding: 10px;
+  }
+
+  hr {
+    width: 90vw;
+  }
+  .lista {
+    margin-top: 15px;
+  }
+  .lista-itens {
+    max-width: 90vw;
+  }
 }
