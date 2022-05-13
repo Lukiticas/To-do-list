@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 id="titulo">TO DO LIST</h1>
+      <div class="postagem" id="tarefa">
+        <input id="texto" placeholder="Hoje eu vou..." content type="text" />
+        <button
+          type="submit"
+          id="button"
+          onclick="criaElemento(textoAtividade.value)"
+        >
+          Enviar
+        </button>
+      </div>
+      <div class="lista">
+        <p>lista:</p>
+        <hr />
+        <ol class="lista-itens" id="lista-itens"></ol>
+      </div>
+    </div>
+    <script src="assets/script.js"></script>
+  </body>
+</html>
