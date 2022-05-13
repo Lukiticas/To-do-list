@@ -4,4 +4,4 @@
 <p>Também é um desafio do curso de introdução ao JS da DIO!!</p>
 <p>Preview</p>
 
-![preview](assets\preview.png)
+![preview](https://github.com/Lukiticas/To-do-list/blob/main/assets/preview.png)
