@@ -17,8 +17,9 @@ html {
   align-items: center;
   justify-content: center;
   background-color: lightgray;
-  overflow-y: hidden;
+  overflow-y: visible;
   overflow-x: hidden;
+  scrollbar-width: none;
 }
 
 .wrapper {
@@ -33,7 +34,7 @@ html {
 #titulo {
   order: 1;
   text-align: center;
-  margin: 1% 0px 1% 0px;
+  margin: 2%;
   color: whitesmoke;
   font-size: 40px;
   font-weight: 1000;
@@ -45,22 +46,21 @@ html {
 }
 .postagem {
   text-align: center;
-  height: 5rem;
-  width: 30rem;
   display: flex;
   align-items: center;
 }
 
 #texto {
-  width: 100%;
+  width: calc(20rem - 1vh);
   height: 30%;
-  padding: 7px 7px 7px;
+  padding: 7px;
   margin: 0.7rem;
-  border: 0.5rem;
+  border: none;
   border-radius: 10px;
   font-size: 1rem;
   color: black;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  overflow: visible;
 }
 
 #texto:focus {
@@ -68,8 +68,8 @@ html {
 }
 
 #button {
-  width: 20%;
-  height: 50%;
+  width: 4rem;
+  height: 2rem;
   border: 0.5rem;
   border-radius: 9px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -129,11 +129,12 @@ hr {
 }
 
 .item-descricao {
+  max-width: 90%;
   margin: 15px;
-  padding: 0 15px 0px 15px;
+  padding: 0 1rem 0 1rem;
   text-decoration: none;
   border-left: 3px solid gray;
-  inline-size: 80%;
+  inline-size: 82%;
   overflow-wrap: break-word;
 }
 
@@ -168,12 +169,11 @@ hr {
 
 @media screen and (max-width: 720px) {
   #titulo {
-    font-size: calc(10vw - 10%);
+    font-size: 230%;
   }
 
   .postagem {
     flex-direction: column;
-    margin: 1rem;
   }
 
   #texto {
@@ -193,5 +193,11 @@ hr {
   }
   .lista-itens {
     max-width: 90vw;
+  }
+}
+
+@media (max-width: 300px) {
+  .item-descricao {
+    inline-size: 60%;
   }
 }
